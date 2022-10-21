@@ -1,0 +1,416 @@
+{
+	"info": {
+		"_postman_id": "de42a9c0-dbbe-4d61-8475-70d1c51aa121",
+		"name": "initialize",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Initialization",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.10.106t:8081/Initialization?data={\"GeometryPath\": \"C:\\\\Users\\\\Hi\\\\AppData\\\\Local\\\\Atracsys\\\\PassiveTrackingSDK\",\n \"CameraIP\": \"172.17.1.50\",\n \"CameraPort\": \"0008\",\n \"AverageCount\": \"10\"\n}",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"10",
+						"106t"
+					],
+					"port": "8081",
+					"path": [
+						"Initialization"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "{\"GeometryPath\": \"C:\\\\Users\\\\Hi\\\\AppData\\\\Local\\\\Atracsys\\\\PassiveTrackingSDK\",\n \"CameraIP\": \"172.17.1.50\",\n \"CameraPort\": \"0008\",\n \"AverageCount\": \"10\"\n}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCameraData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/GetCameraData",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"GetCameraData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CollectStatic",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/CollectStaticData?data={\"ToolMarker\":\"8200098\",\"ReferenceMarker\":\"1550100\",\"MaximumPoint\":\"1000\",\"StartDelay\":\"0\"}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"CollectStaticData"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "{\"ToolMarker\":\"8200098\",\"ReferenceMarker\":\"1550100\",\"MaximumPoint\":\"1000\",\"StartDelay\":\"0\"}"
+						}
+					]
+				},
+				"description": "static"
+			},
+			"response": []
+		},
+		{
+			"name": "StartPivoting",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/StartPivoting?data={\"ToolMarker\":\"8200098\",\"ReferenceMarker\":\"1550100\",\"RegistrationType\":\"sphere\",\"StartDelay\":\"0\",\"MaxPoints\":\"5000\"}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"StartPivoting"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "{\"ToolMarker\":\"8200098\",\"ReferenceMarker\":\"1550100\",\"RegistrationType\":\"sphere\",\"StartDelay\":\"0\",\"MaxPoints\":\"5000\"}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/Guard?data={\"ToolMarker\":\"8200098\",\"ReferenceMarker\":\"1550100\",\"StartDelay\":\"0\"}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"Guard"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "{\"ToolMarker\":\"8200098\",\"ReferenceMarker\":\"1550100\",\"StartDelay\":\"0\"}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCollectedPointCount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/GetCollectedPointCount",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"GetCollectedPointCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCollectedPointStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/GetCollectedPointStatus",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"GetCollectedPointStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReloadGeometry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/ReloadGeometry?data={\"GeometryName\":\"geometry9997.ini\",\"Type\":\"Load\"}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"ReloadGeometry"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "{\"GeometryName\":\"geometry9997.ini\",\"Type\":\"Load\"}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GuardDistance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/GuardDistance?data={\"ReferenceMarker\":\"1550100\",\"DistanceThreshold\":\"15\"}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"GuardDistance"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "{\"ReferenceMarker\":\"1550100\",\"DistanceThreshold\":\"15\"}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orientation_baseplate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/Orientation?data={\"ToolMarker\":\"8300098\",\"ReferenceMarker\":\"4001\"}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"Orientation"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "{\"ToolMarker\":\"8300098\",\"ReferenceMarker\":\"4001\"}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetVersionNumber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/GetVersionNumber",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"GetVersionNumber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MarkerRecalibration",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/MarkerRecalibration?data={\"MarkerName\":\"8200098\",\"MaxPoints\":\"14000\"} ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"MarkerRecalibration"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "{\"MarkerName\":\"8200098\",\"MaxPoints\":\"14000\"} "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guard Clear",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/GuardClear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"GuardClear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lasers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/Lasers?data={\"Mode\":\"0\"} ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"Lasers"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "{\"Mode\":\"0\"} "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single Pose Registration",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/SPR?data={\"EndEffectorMarker\":\"9997\",\"Method\":\"With\",\"RobotPose\":[-508.215, -283.2, 280.474, -173.32, 6.377, 77.057]}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"SPR"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "{\"EndEffectorMarker\":\"9997\",\"Method\":\"With\",\"RobotPose\":[-508.215, -283.2, 280.474, -173.32, 6.377, 77.057]}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConnectionStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/GetConnectionStatus",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"GetConnectionStatus"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
